@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./main.css" />
+    <title>Learn flexbox with game interface</title>
+  </head>
+  <body>
+    <!-- header -->
+    <header class="navbar">
+      <div class="logo">XGame</div>
+      <nav class="menu">
+        <a href="/">Home</a>
+        <a href="/">About</a>
+        <a href="/">Services</a>
+        <a href="/">Contact</a>
+      </nav>
+    </header>
+    <!-- analytics -->
+    <section class="card-container">
+      <div class="card">
+        <p>Users</p>
+        <span>80</span>
+      </div>
+      <div class="card">
+        <p>Stars</p>
+        <span>20</span>
+      </div>
+      <div class="card">
+        <p>Points</p>
+        <span>100</span>
+      </div>
+      <div class="card">
+        <p>Levels</p>
+        <span>100</span>
+      </div>
+      <div class="card">
+        <p>Medal</p>
+        <span>3</span>
+      </div>
+    </section>
+
+    <!-- game section -->
+    <section class="game-container">
+      <!-- title/header -->
+      <div class="game-header">
+        <h1>Guess the number</h1>
+      </div>
+
+      <!-- Instruction panel -->
+
+      <section class="game-instructions">
+        <p>Guess a number between 1 and 100!</p>
+        <p>Press "Submit" to make a guess.</p>
+      </section>
+
+      <!-- input section -->
+      <section class="game-input">
+        <input type="number" id="guessInput" placeholder="Enter your guess" />
+        <button id="submitGuess">Submit</button>
+      </section>
+
+      <!-- Result screen -->
+      <section class="game-result">
+        <p id="resultMessage">Make a guess to start the game</p>
+      </section>
+      <!-- Game control -->
+      <section class="game-controls">
+        <button id="restartGame">Restart Game</button>
+        <div class="score">
+          <p>Attemps: <span id="attemptsCount">0</span></p>
+        </div>
+      </section>
+    </section>
+  </body>
+</html>
