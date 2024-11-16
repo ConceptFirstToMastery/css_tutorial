@@ -1,0 +1,180 @@
+/* Universal Selector (Applies styles to all elements) */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Ensures padding and borders are included in the element's total width and height */
+}
+
+/* Body with Dark Background and Light Text */
+body {
+  font-family: "Arial", sans-serif; /* Font property */
+  line-height: 1.6; /* Common property for spacing between lines */
+  background-color: #121212; /* Background property for the dark theme */
+  color: #f0f0f0; /* Text color property */
+}
+
+/* ID Selector (targeting HTML elements directly) */
+/* Styling the Header */
+#main-header {
+  background-color: #1e1e1e;
+  color: #fff;
+  padding: 20px;
+  text-align: center; /* Aligns text to the center */
+}
+
+/* Descendant Combinator (ul inside nav inside header) */
+nav ul {
+  list-style: none;
+  display: flex; /* Flexbox layout for the list items */
+  justify-content: center;
+  padding-top: 10px;
+}
+
+/* Child Combinator (li elements that are direct children of ul) */
+nav ul li {
+  margin-right: 20px; /* Adds spacing between menu items */
+}
+
+/* Child selector */
+nav ul li > a {
+  color: #fff;
+}
+
+/* Class Selector (.read-more is applied to "Read more" links) */
+.read-more {
+  color: #3498db; /* Blue color for read-more links */
+  text-decoration: none; /* Removes underline from the links */
+}
+
+/* Pseudo-Element: after */
+.read-more::after {
+  content: " →";
+}
+
+/* Pseudo-Class (:hover for interactive effects) */
+.read-more:hover {
+  color: #e67e22; /* Changes color when hovering */
+}
+
+/* Grouping Selectors */
+#about,
+#posts {
+  padding: 20px;
+  margin: 20px;
+  background-color: #1e1e1e;
+  border-radius: 8px; /* Adds rounded corners */
+}
+
+/* Element Selectors  */
+h2 {
+  margin-bottom: 15px;
+  font-size: 2em;
+  color: #e67e22; /* Highlight color for headings */
+}
+
+/* Class Selector for highlighting text */
+.highlight {
+  color: #e67e22; /* Orange highlight */
+  font-weight: bold; /* Emphasizes the text */
+}
+
+/* Pseudo-Element (::before) */
+h2::before {
+  content: "🌟"; /* Adds a star before every heading */
+  display: inline-block;
+  margin-right: 10px;
+}
+
+/* Element selector */
+footer {
+  background-color: #1e1e1e;
+  padding: 15px;
+  text-align: center;
+  border-top: 2px solid #333; /* Adds a border at the top of the footer */
+}
+
+/* Decendant selector */
+footer a {
+  color: #f0f0f0;
+  margin: 0 10px;
+}
+
+/* class selector + Pseudo-Class*/
+footer a:hover {
+  color: #3498db; /* Changes color when hovering */
+}
+
+/* Attribute Selector (targeting links "https://") */
+a[href^="https://"]
+{
+  color: #f0f0f0;
+}
+
+/* Descendant Selector (targeting all i elements inside navigation links) */
+nav ul li a i {
+  color: #e67e22; /* Icon color */
+  margin-right: 8px;
+}
+
+/*class selector*/
+.post {
+  padding: 15px;
+  margin-bottom: 15px;
+  background-color: #2b2b2b;
+  border-radius: 8px; /* Common property for rounded corners */
+}
+
+/*class selector*/
+.post-title {
+  color: #f0f0f0;
+}
+
+/*class selector*/
+.post-content {
+  color: #ddd;
+}
+
+/* class selector + Pseudo-Element (::after) */
+.post-title::after {
+  content: "📝"; /* Adds a note emoji after post titles */
+  margin-left: 10px;
+}
+
+/* Child Selector (li items directly under ul) */
+nav ul > li > a {
+  font-size: 1.2em; /* Font size for links */
+  text-decoration: none;
+  display: flex;
+  align-items: center; /* Aligns text and icons horizontally */
+}
+
+/* Decendant + Pseudo-Class (:hover on navigation links) */
+nav ul li a:hover {
+  color: #3498db; /* Blue on hover */
+}
+
+/* Pseudo-Class (:hover on button) */
+a:hover,
+button:hover {
+  transition: color 0.3s ease-in-out; /* Adds smooth color transition */
+}
+
+/* Decendant Selector for footer and social icons */
+footer a i {
+  font-size: 1.5em;
+}
+
+/* Element Selector  */
+section {
+  margin-top: 20px;
+}
+
+/* Descendant Selector (targets elements within a section) */
+section h2 {
+  color: #e67e22;
+}
+
+/* Child Selector for direct child elements */
+nav > ul > li {
+  margin-right: 15px;
+}

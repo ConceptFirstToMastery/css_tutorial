@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learn layouts with simple CMS Dashboard</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./dark-themed.css" />
+  </head>
+  <body>
+    <div class="dashboard">
+      <!-- Sidebar -->
+      <nav class="sidebar">
+        <h2>MyCMS</h2>
+        <ul>
+          <li>
+            <a href="#"><i class="fas fa-home"></i> Dashboard</a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-cogs"></i> Settings</a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-chart-line"></i> Analytics</a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-envelope"></i> Messages</a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-users"></i>Customers</a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-user"></i>User & Role</a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-cart-plus"></i>Orders</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Main Content -->
+      <section class="main-content">
+        <header>
+          <h1>Dashboard Overview</h1>
+        </header>
+
+        <div class="content-wrapper">
+          <!-- Card 1 -->
+          <div class="content-card">
+            <i class="fas fa-users"></i>
+            <h3>Users</h3>
+            <p>1,204 Active Users</p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="content-card">
+            <i class="fas fa-chart-pie"></i>
+            <h3>Sales</h3>
+            <p>$10,423 in Revenue</p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="content-card">
+            <i class="fas fa-comments"></i>
+            <h3>Messages</h3>
+            <p>157 Unread Messages</p>
+          </div>
+        </div>
+
+        <!-- Table Section -->
+        <div class="order-section">
+          <div class="order-icon"><i class="fas fa-cart-plus"></i></div>
+          <div class="order-card">
+            <h2>Orders Overview</h2>
+            <table class="orders-table">
+              <thead>
+                <tr>
+                  <th>Order ID</th>
+                  <th>Date</th>
+                  <th>Product</th>
+                  <th>Quantity</th>
+                  <th>Total</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>#001</td>
+                  <td>2024-09-15</td>
+                  <td>Wireless Headphones</td>
+                  <td>2</td>
+                  <td>$120</td>
+                </tr>
+                <tr>
+                  <td>#002</td>
+                  <td>2024-09-14</td>
+                  <td>Smartwatch</td>
+                  <td>1</td>
+                  <td>$150</td>
+                </tr>
+                <tr>
+                  <td>#003</td>
+                  <td>2024-09-13</td>
+                  <td>Bluetooth Speaker</td>
+                  <td>3</td>
+                  <td>$180</td>
+                </tr>
+                <tr>
+                  <td>#004</td>
+                  <td>2024-09-12</td>
+                  <td>Gaming Laptop</td>
+                  <td>1</td>
+                  <td>$1200</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- back to top -->
+      <div class="back-to-top">Back to top</div>
+    </div>
+  </body>
+</html>
