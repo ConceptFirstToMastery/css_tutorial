@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./main.css" />
+
+    <title>Caller Service</title>
+  </head>
+  <body>
+    <!-- Grid layout -->
+    <div class="wrapper">
+      <!-- nav bar -->
+      <nav class="navbar">
+        <div class="navbar__left">
+          <i class="fa-solid fa-video"></i>
+          <i class="fa-solid fa-phone"></i>
+          <i class="fa-solid fa-bookmark"></i>
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <div class="navbar__right">
+          <i class="fa-solid fa-user"></i>
+          <i class="fa-solid fa-bell"></i>
+        </div>
+      </nav>
+
+      <!-- sidebar -->
+      <div class="sidebar">
+        <div class="sidebar__logo"><i class="fa-solid fa-video"></i></div>
+        <ul>
+          <li>
+            <i class="fa-solid fa-video"></i>
+          </li>
+          <li>
+            <i class="fa-solid fa-phone"></i>
+          </li>
+          <li>
+            <i class="fa-solid fa-image"></i>
+          </li>
+          <li>
+            <i class="fa-solid fa-user"></i>
+          </li>
+          <li>
+            <i class="fa-solid fa-bell"></i>
+          </li>
+          <li>
+            <i class="fa-solid fa-gear"></i>
+          </li>
+        </ul>
+        <button class="logout">
+          <i class="fa-solid fa-arrow-right-from-bracket"></i>
+        </button>
+      </div>
+
+      <!-- main screen -->
+      <main class="main">
+        <!-- header -->
+        <div class="main__dialer">
+          <div class="main__dialer-header">
+            <div class="main__dialer-header-top">
+              <h4>Dialer</h4>
+              <div class="main__dialer-header-icon">
+                <div><img src="./images/linkIn.png" alt="linkin" /></div>
+              </div>
+            </div>
+            <input type="text" placeholder="Enter phone number" />
+          </div>
+
+          <!-- dailer controls -->
+          <div class="main__dialer--controls">
+            <button class="main__dialer--control">
+              <span style="font-size: 24px; font-weight: 500">1</span>
+            </button>
+
+            <button class="main__dialer--control">
+              <span style="font-size: 24px; font-weight: 500">2</span>
+              <span style="font-size: 14px">ABC</span>
+            </button>
+
+            <button class="main__dialer--control">
+              <span style="font-size: 24px; font-weight: 500">3</span>
+              <span style="font-size: 14px">DEF</span>
+            </button>
+
+            <button class="main__dialer--control">
+              <span style="font-size: 24px; font-weight: 500">4</span>
+              <span style="font-size: 14px">GHI</span>
+            </button>
+
+            <button class="main__dialer--control">
+              <span style="font-size: 24px; font-weight: 500">5</span>
+              <span style="font-size: 14px">JKL</span>
+            </button>
+
+            <button class="main__dialer--control">
+              <span style="font-size: 24px; font-weight: 500">6</span>
+              <span style="font-size: 14px">MNO</span>
+            </button>
+
+            <button class="main__dialer--control">
+              <span style="font-size: 24px; font-weight: 500">7</span>
+              <span style="font-size: 14px">PQRS</span>
+            </button>
+
+            <button class="main__dialer--control">
+              <span style="font-size: 24px; font-weight: 500">8</span>
+              <span style="font-size: 14px">TUV</span>
+            </button>
+
+            <button class="main__dialer--control">
+              <span style="font-size: 24px; font-weight: 500">9</span>
+              <span style="font-size: 14px">WXYZ</span>
+            </button>
+
+            <button class="main__dialer--control">
+              <span style="font-size: 24px; font-weight: 500">*</span>
+            </button>
+
+            <button class="main__dialer--control">
+              <span style="font-size: 24px; font-weight: 500">0</span>
+              <span style="font-size: 14px">+</span>
+            </button>
+
+            <button class="main__dialer--control">
+              <span style="font-size: 24px; font-weight: 500">#</span>
+            </button>
+
+            <button class="main__dialer--control-back">
+              <img src="./images/tag-cross.png" alt="back key" />
+            </button>
+
+            <button class="main__dialer--control-call">
+              <i class="fa-solid fa-phone"></i>
+            </button>
+          </div>
+        </div>
+      </main>
+
+      <!-- aside -->
+      <aside class="aside">
+        <h4>People joined</h4>
+        <div class="aside__users_list">
+          <div class="aside__user">
+            <div class="aside__user-icon">
+              <img
+                src="./images/profile_1.png"
+                alt="user profile"
+                width="100%"
+                height="100%"
+              />
+            </div>
+            <span>John Stone</span>
+          </div>
+
+          <div class="aside__user">
+            <div class="aside__user-icon">
+              <img
+                src="./images/profile_2.png"
+                alt="user profile"
+                width="100%"
+                height="100%"
+              />
+            </div>
+            <span>Regina Adams</span>
+          </div>
+          <div class="aside__user">
+            <div class="aside__user-icon">
+              <img
+                src="./images/profile_4.png"
+                alt="user profile"
+                width="100%"
+                height="100%"
+              />
+            </div>
+            <span>William Smith</span>
+          </div>
+          <div class="aside__user">
+            <div class="aside__user-icon">
+              <img
+                src="./images/profile_5.png"
+                alt="user profile"
+                width="100%"
+                height="100%"
+              />
+            </div>
+            <span>John Stone</span>
+          </div>
+          <div class="aside__user">
+            <div class="aside__user-icon">
+              <img
+                src="./images/profile_6.png"
+                alt="user profile"
+                width="100%"
+                height="100%"
+              />
+            </div>
+            <span>Janet Lol</span>
+          </div>
+          <div class="aside__user">
+            <div class="aside__user-icon">
+              <img
+                src="./images/profile_7.png"
+                alt="user profile"
+                width="100%"
+                height="100%"
+              />
+            </div>
+            <span>Sarah Wine</span>
+          </div>
+        </div>
+      </aside>
+      <!-- footer -->
+      <footer class="footer">
+        <p>&copy; ConceptFirstToMastery, 2024</p>
+      </footer>
+    </div>
+  </body>
+</html>

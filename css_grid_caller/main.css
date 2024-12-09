@@ -1,0 +1,356 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Sora:wght@100..800&display=swap");
+
+:root {
+  --primary: #09094b;
+  --light100: #ffffff;
+  --danger: #691a1a;
+  --success: green;
+  --blue70: #5858eb;
+  --gray80: #808080;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Outfit" sans-serif;
+  color: var(--light100);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+/* wrapper */
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 70px 1fr 200px;
+  grid-template-rows: 30px auto;
+
+  grid-template-areas:
+    "sidebar navbar navbar"
+    "sidebar main aside"
+    "footer footer footer";
+}
+
+/* navbar */
+.wrapper .navbar {
+  grid-area: navbar;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1em;
+  background-color: var(--light100);
+  border-bottom: 1px solid var(--primary);
+}
+
+.navbar .navbar__right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-right: 10px;
+}
+
+.navbar .navbar__left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.wrapper .navbar i {
+  cursor: pointer;
+  color: var(--primary);
+}
+
+/* sidebar */
+.wrapper .sidebar {
+  grid-area: sidebar;
+  background-color: var(--primary);
+  min-height: 95vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-right: 1px solid var(--light100);
+}
+
+.sidebar__logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid var(--light100);
+  background-color: var(--blue70);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.sidebar ul {
+  margin: 2rem 0;
+  padding: 0;
+  list-style: none;
+  color: var(--light100);
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr;
+  justify-content: center;
+}
+
+.sidebar .logout {
+  outline: 0;
+  border: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 12px;
+  background-color: var(--danger);
+  cursor: pointer;
+}
+
+.sidebar .logout i {
+  color: var(--light100);
+}
+
+/* main */
+.wrapper .main {
+  grid-area: main;
+  background-color: var(--light100);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main .main__video_calls {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+}
+
+.main .main__video-call {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main .main__video-icon {
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid var(--primary);
+}
+
+.main__video-call h4 {
+  color: var(--primary);
+}
+
+.main .call__controls {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  background-color: var(--primary);
+  padding: 4px 5px;
+  border-radius: 5px;
+}
+
+.call__controls-active {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: rgba(255, 68, 0, 0.41);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main .call__controls i {
+  cursor: pointer;
+}
+
+.main .call__controls i:hover {
+  color: var(--blue70);
+}
+
+/* dialer service */
+.main__dialer {
+  display: flex;
+  flex-direction: column;
+  justify-items: stretch;
+}
+
+.main__dialer-header {
+  width: 480px;
+  min-height: 138px;
+  background-color: var(--blue70);
+  padding: 0.75rem;
+
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.main__dialer-header > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main__dialer-header .main__dialer-header-top h4 {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.main__dialer-header .main__dialer-header-icon {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.main__dialer-header .main__dialer-header-icon > div {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--gray80);
+}
+
+.main__dialer-header input {
+  border: 0;
+  background-color: transparent;
+  color: var(--light100);
+  padding-top: 0.5rem;
+  outline: none;
+  box-shadow: none;
+}
+
+.main__dialer-header input::placeholder {
+  color: var(--light100);
+}
+
+.main__dialer--controls {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  place-items: center;
+  gap: 1rem;
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+  border-left: 1px solid var(--primary);
+  border-right: 1px solid var(--primary);
+  border-bottom: 1px solid var(--primary);
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.main__dialer--control {
+  width: 70.45px;
+  height: 70.45px;
+  border-radius: 50%;
+  background-color: var(--primary);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--light100);
+  cursor: pointer;
+}
+
+.main__dialer--control-call {
+  width: 70.45px;
+  height: 70.45px;
+  border-radius: 50%;
+  background-color: var(--success);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--light100);
+  cursor: pointer;
+}
+
+.main__dialer--control-call i {
+  color: var(--light100);
+  font-size: 24px;
+}
+
+.main__dialer--control-back {
+  width: 70.45px;
+  height: 70.45px;
+  border-radius: 50%;
+  background-color: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--light100);
+  cursor: pointer;
+}
+
+/* aside */
+.wrapper .aside {
+  grid-area: aside;
+  background-color: var(--primary);
+  border-left: 1px solid var(--light100);
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.aside h4 {
+  font-family: "Sora" sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--light100);
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+.aside .aside__user {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  gap: 10px;
+}
+
+.aside .aside__user-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border: 2px solid var(--light100);
+}
+
+/* footer */
+.wrapper .footer {
+  grid-area: footer;
+  background-color: var(--primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.footer p {
+  font-weight: 600;
+  font-family: "Sora" sans-serif;
+}
