@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Finance Tracker</title>
+    <link rel="stylesheet" href="./main.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <!-- header section -->
+    <header class="app-header">
+      <h1>Finance Tracker</h1>
+      <nav>
+        <ul>
+          <li>
+            <a href="#overview">Overview</a>
+          </li>
+          <li>
+            <a href="#transactions">Transactions</a>
+          </li>
+          <li>
+            <a href="#analytics">Analytics</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- main section -->
+    <main>
+      <!-- Balance Overview -->
+      <section id="overview" class="balance-overview">
+        <div class="balance-card">
+          <h2>Current Balance</h2>
+          <p class="amount">$12,450.00</p>
+          <p>Last updated: Jan 6, 2025</p>
+        </div>
+      </section>
+
+      <!-- Analytics section -->
+      <section id="analytics" class="analytics">
+        <h2>Monthly Spending</h2>
+        <div class="analytics-chart">
+          <div class="chart-container">
+            <canvas id="expensesChart"></canvas>
+          </div>
+
+          <div class="chart-container">
+            <canvas id="spendingTrendChart"></canvas>
+          </div>
+        </div>
+      </section>
+
+      <!-- Transactions section -->
+      <section id="transactions" class="transactions">
+        <div>
+          <h2>Recent Transaction</h2>
+          <a href="#">View All</a>
+        </div>
+        <ul>
+          <li>
+            <span>Groceries</span>
+            <span class="expense">-$150.00</span>
+          </li>
+          <li>
+            <span>Salary</span>
+            <span class="income">$3,000.00</span>
+          </li>
+          <li>
+            <span>Electric Bill</span>
+            <span class="expense">-$90.00</span>
+          </li>
+          <li>
+            <span>Coffee</span>
+            <span class="expense">-$12.00</span>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Fixed background section -->
+      <section id="fixed-background" class="fixed-background">
+        <div class="content-overlay">
+          <h2>Plan Your Finance</h2>
+          <p>
+            Take control of your financial future. Track your expenses, save
+            smarter, and invest wisely with our Finance Tracker.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <!-- footer section -->
+    <footer class="app-footer">
+      <p>&copy; 2025 ConceptFirstToMastry. All rights reserved</p>
+      <p>
+        <a href="#">Privacy Policy</a> |
+        <a href="#">Terms of Service</a>
+      </p>
+    </footer>
+
+    <!-- Script section -->
+    <script>
+      // pie chart for expense beakdown
+      const ctx1 = document.getElementById("expensesChart").getContext("2d");
+
+      new Chart(ctx1, {
+        type: "pie",
+        data: {
+          labels: [
+            "Rent",
+            "Groceries",
+            "Utilities",
+            "Transport",
+            "Entertainment",
+          ],
+          datasets: [
+            {
+              data: [500, 300, 200, 100, 150],
+              backgroundColor: [
+                "rgba(255, 99, 132, 0.7)",
+                "rgba(54, 162, 235, 0.7)",
+                "rgba(255, 206, 86, 0.7)",
+                "rgba(75, 192, 192, 0.7)",
+                "rgba(153, 102, 255, 0.7)",
+              ],
+              borderWidth: 1,
+            },
+          ],
+        },
+        options: {
+          plugins: {
+            legend: {
+              position: "bottom",
+            },
+          },
+        },
+      });
+
+      // Line Chart for Spending Trend
+      const ctx2 = document
+        .getElementById("spendingTrendChart")
+        .getContext("2d");
+      new Chart(ctx2, {
+        type: "line",
+        data: {
+          labels: ["January", "February", "March", "April", "May"],
+          datasets: [
+            {
+              label: "Monthly Spending ($)",
+              data: [300, 400, 350, 450, 500],
+              fill: true,
+              backgroundColor: "rgba(75, 192, 192, 0.2)",
+              borderColor: "rgba(75, 192, 192, 1)",
+              tension: 0.3,
+            },
+          ],
+        },
+        options: {
+          plugins: {
+            legend: {
+              position: "top",
+            },
+          },
+          scales: {
+            y: {
+              beginAtZero: true,
+            },
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

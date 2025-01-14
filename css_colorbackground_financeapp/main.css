@@ -1,0 +1,227 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+
+:root {
+  --white: #fff;
+}
+
+/* general reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Mono", sans-serif;
+}
+
+/* body */
+body {
+  background: linear-gradient(to bottom, #f5f5f5, #e3f2fd);
+  color: #333;
+  line-height: 1.6;
+}
+
+/* header */
+.app-header {
+  background: linear-gradient(to right, #00563b, #81c784);
+  color: var(--white);
+  padding: 20px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.app-header h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.app-header ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+/* .app-header li {
+  margin: 0 15px;
+} */
+
+.app-header a {
+  text-decoration: none;
+  color: var(--white);
+  font-size: 500;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.app-header a:hover {
+  text-decoration: underline;
+}
+
+/* main section */
+main {
+  padding: 20px;
+}
+
+/* balance overview */
+.balance-overview {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.balance-card {
+  background: linear-gradient(to bottom right, #ffee58, #fbc02d);
+  border-radius: 10px;
+  text-align: center;
+  color: #333;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  width: 300px;
+}
+
+.balance-card .amount {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #388e3c;
+}
+
+/* analytic section */
+.analytics {
+  margin: 20px 0;
+}
+
+.analytics h2 {
+  margin-bottom: 15px;
+  color: #4caf50;
+}
+
+.analytics-chart {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: #00563b;
+  background: radial-gradient(circle at top, #00563b, #fbc02d, #ffa000);
+  border-radius: 12px;
+}
+
+.chart-container {
+  width: 100%;
+  max-width: 300px;
+  height: 300px;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(245, 245, 245, 0.8);
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+}
+
+canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* transaction section */
+.transactions {
+  margin: 20px 0;
+}
+
+.transactions div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.transactions h2 {
+  margin-bottom: 15px;
+  color: #4caf50;
+}
+
+.transactions a {
+  font-weight: 700;
+  color: #4caf50;
+}
+
+.transactions ul {
+  list-style: none;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background: #fff;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.transactions li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border: 1px solid #ddd;
+}
+
+.transactions li:last-child {
+  border-bottom: none;
+}
+
+.transactions .expense {
+  color: #d32f2f;
+  font-weight: bold;
+}
+
+.transactions .income {
+  color: #388e3c;
+  font-weight: bold;
+}
+
+/* fixed background */
+.fixed-background {
+  position: relative;
+  background: url("https://res.cloudinary.com/dklrn1vdy/image/upload/v1736599302/pexels-essow-k-251295-936722_k7af9p.jpg")
+    no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #fff;
+  text-align: center;
+  padding: 80px 20px;
+  height: 300px;
+}
+
+.fixed-background .content-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+.fixed-background h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.fixed-background p {
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+/* footer */
+.app-footer {
+  background: linear-gradient(to right, #00563b, #81c784);
+  color: var(--white);
+  text-align: center;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+.app-footer a {
+  color: var(--white);
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.app-footer a:hover {
+  text-decoration: underline;
+}
