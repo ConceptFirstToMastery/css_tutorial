@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI News Dashboard</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+      <div class="logo">🤖AI News</div>
+      <button id="themeToggle">🌙</button>
+    </header>
+
+    <!-- MAIN NEWS SECTION -->
+    <main class="news-container .dark">
+      <!-- featured -->
+      <section class="featured">
+        <h2>Featured AI News</h2>
+        <div id="featured-news"></div>
+      </section>
+
+      <!-- lastes news -->
+      <section class="latest-news">
+        <h2>Latest Updates</h2>
+        <ul id="news-list"></ul>
+      </section>
+
+      <!-- AI Articles Section -->
+      <section class="articles-grid">
+        <h2>AI Insights & Analysis</h2>
+        <div class="grid-container">
+          <article class="article">
+            <img src="./assets/ai-image1.png" alt="AI news" />
+            <h3>How AI is Revolutionaizing Healthcare</h3>
+            <p class="writer">
+              By Jane Doe | <span class="source">TechCrunch</span>
+            </p>
+            <p class="description">
+              AI-powered diagnostics and treatments are reshaping modern
+              medicine.
+            </p>
+          </article>
+
+          <article class="article">
+            <img src="/assets/ai-image2.png" alt="AI News" />
+            <h3>The Future of AI in Finance</h3>
+            <p class="writer">
+              By John Smith | <span class="source">Forbes</span>
+            </p>
+            <p class="description">
+              AI is optimizing investments, fraud detection, and risk
+              assessment.
+            </p>
+          </article>
+
+          <article class="article">
+            <img src="/assets/ai-image3.png" alt="AI News" />
+            <h3>ChatGPT and the Evolution of Conversational AI</h3>
+            <p class="writer">
+              By Alice Johnson | <span class="source">Wired</span>
+            </p>
+            <p class="description">
+              How large language models are redefining human-computer
+              interactions.
+            </p>
+          </article>
+
+          <article class="article">
+            <img src="/assets/ai-image4.png" alt="AI News" />
+            <h3>AI Ethics: Balancing Innovation and Responsibility</h3>
+            <p class="writer">
+              By Michael Lee | <span class="source">MIT Review</span>
+            </p>
+            <p class="description">
+              Exploring the challenges of AI bias, privacy, and accountability.
+            </p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <p>&copy; 2025 ConceptFirstToMastery</p>
+    </footer>
+  </body>
+</html>
