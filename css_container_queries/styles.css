@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #333;
+}
+
+.card-container {
+  background-color: beige;
+  max-width: 1024px;
+  margin: 100px auto;
+  padding: 30px;
+
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  container-type: inline-size;
+  flex: 1 1 300px;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+
+  & .header {
+    height: 100px;
+    background: skyblue;
+    border-radius: 10px;
+    position: relative;
+
+    & .image-outter {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background-color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      bottom: -30px;
+      left: 35%;
+
+      & .image-inner {
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        background-color: blue;
+      }
+    }
+  }
+
+  & .content {
+    margin: 2rem 0;
+    & h2 {
+      color: balck;
+      font-weight: bolder;
+      text-align: center;
+    }
+
+    & h3 {
+      color: grey;
+      font-weight: bolder;
+      text-align: center;
+    }
+
+    & .location-box {
+      margin-top: 10px;
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
+      & .job-title {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+      }
+      & .location {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+      }
+    }
+
+    & .extrainfo-box {
+      display: none;
+    }
+  }
+
+  & .footer {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    & button {
+      padding: 5px 10px;
+      background-color: skyblue;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  }
+
+  /* container query */
+  @container (min-width:38rem) {
+    & .header {
+      background: green;
+    }
+
+    & .content {
+      & .location-box {
+        flex-direction: row;
+      }
+      & .extrainfo-box {
+        display: flex;
+        gap: 20px;
+
+        & .date {
+          display: flex;
+          gap: 15px;
+          align-items: center;
+        }
+
+        & .post {
+          display: flex;
+          gap: 15px;
+          align-items: center;
+        }
+      }
+    }
+
+    & .footer {
+      flex-direction: row;
+      & button {
+        flex: 1;
+      }
+    }
+  }
+}
